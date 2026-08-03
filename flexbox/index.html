@@ -1,7 +1,7 @@
 <!-- Define que o documento utiliza HTML5. Deve ser a priemeira declaração do arquivo -->
 <!DOCTYPE html>
 <!-- A tag html envolve toda a pagina. lang="pt-br" informa o idioma para navegadores e leitores de tela. -->
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <!-- O head guarda configurações que não aparecem diretamente no conteudo visual. -->
 
@@ -44,7 +44,7 @@
     =================================================== -->
 
     <nav class="property-navigation" aria-label="Navegação das propriedades do Flexbox">
-        <a href="#flex-direction">flex-direction></a>
+        <a href="#flex-direction">flex-direction</a>
         <a href="#justify-content">justify-content</a>
         <a href="#align-items">align-items</a>
         <a href="#gap">gap</a>
@@ -66,12 +66,47 @@
          PARTE 1 - PROPRIEDADES DO FLEX CONTAINER
          São aplicados ao elemento pai, responsável por organizar itens.
     =================================================== -->
-    </main>
     <header class="group-header">
         <span>Parte 1</span>
-        <h2>Propriedades o Flex Container</h2>
+        <h2>Propriedades do Flex Container</h2>
         <p>Estas propriedades são aplicadas ao elemento que contém os itens.</p>
     </header>
+    
+    <!-- ===================================================
+         SEÇÃO: flex-direction
+         Define a direção do eixo principal e a ordem inicial dos itens.
+         O id permite acessar esta seção pelo menu de navegação.
+    =================================================== -->
+    <section class="demo"  id="flex-direction">
+        <!-- Agrupa o titulo da propriedade e o botão que restaura o valor  inicial. -->
+         <div class="demo-heading">
+            <div>
+            <span class="property-type">Flex container</span>
+            <h2>flex-direction</h2>
+         </div>
+         <button type="button"  class="reset-button"  data-reset-section="direction">Restaurar Padrão</button>
+         </div>
+
+         <p class="demo-introduction">
+            Define a direção do eixo principal e a ordem em que os itens são apresentados.
+         </p>
+
+         <!-- 
+           Grupos de botões com valores da propriedade.
+           role= "group" e aria-label ajudam leitores de tela.
+           data-* guarda o valor que sera lido pelo Javascript.
+           aria-pressed informa qual botão esta ativo.
+         -->
+        <div class="buttons"  role="group"  aria-label="Valores de flex-direction">
+            <button type="button" data-direction="row" aria-pressed="true">row</button>
+            <button type="button" data-direction="row-reverse" aria-pressed="false">row-reverse</button>
+            <button type="button" data-direction="column" aria-pressed="false">columncolumn-reverse</button>
+            <button type="button" data-direction="column-reverse" aria-pressed="false">column-reverse</button>
+        </div>
+
+    </section>
+
+    </main>
 
 </body>
 </html>
